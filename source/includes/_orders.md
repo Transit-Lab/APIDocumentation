@@ -9,17 +9,20 @@ curl "https://api.transitinc.com/v1/orders"
   -H "Content-Type: application/json"
   -d '{
     "purchaseOrder": "123456",
-    "shipToLanguageNo": "EN",
-    "shipToName": "John Doe",
-    "shipToPhone": "(514) 432-4323",
-    "shipToEmail": "johndoe@hotmail.com",
-    "shipToAddressLine1": "123, Fake street",
-    "shipToAddressLine2": null,
-    "shipToCity": "Montreal",
-    "shipToState": "QC",
-    "shipToZip": "D6G 9J4",
-    "shipToCountry": "CA",
-    "shipToNote": "LAISSER SUR PLACE SI PERSONNE",
+    "isPickup": false,
+    "shipTo": {
+      "LanguageNo": "EN",
+      "Name": "John Doe",
+      "Phone": "(514) 432-4323",
+      "Email": "johndoe@hotmail.com",
+      "AddressLine1": "123, Fake street",
+      "AddressLine2": null,
+      "City": "Montreal",
+      "State": "QC",
+      "Zip": "D6G 9J4",
+      "Country": "CA",
+      "Note": "LAISSER SUR PLACE SI PERSONNE"
+    },
     "details": [
         { "product": "8-56140", "qty": 2 },
         { "product": "LOP-LP5", "qty": 1 }
@@ -46,19 +49,21 @@ This endpoint submits a new order to Transit.
 Parameter | Required | Description
 --------- | -------- | -----------
 purchaseOrder | yes | Unique alphanumeric order number, will be set as the PO on the Transit Invoice for this order. Max 10 characters.
-shipToLanguageNo | yes | Packing Slip Language. Must be EN, or FR.
-shipToName | yes | Ship to name, on carrier label, packing slip
-shipToPhone | yes	|	Ship to phone, for carrier
-shipToEmail | no	| Ship to email, for carrier
-shipToAddressLine1 | yes |	Ship to address line 1
-shipToAddressLine2 | no | Ship to address line 2
-shipToCity | yes | Ship to city
-shipToState | yes	|	Ship to state (2 char)
-shipToZip | yes	|	Ship to zip/postal code
-shipToCountry | yes	|	Ship to country must always be CA.
-shipToNote | yes |	Ship to note (for carrier/customer) max 100 caracters.
-product | yes	|	Transit part number
-qty | yes	| Order Qty
+isPickup | yes | false if you want Transit to ship the order. true for a customer pickup at Transit Warehouse.
+shipTo | no | Don't specify the shipTo object for pickup orders or if you want to keep the default shipto configured in the linked Transit Customer Zone account.
+shipTo.LanguageNo | yes | Packing Slip Language. Must be EN, or FR.
+shipTo.Name | yes | Ship to name, on carrier label, packing slip
+shipTo.Phone | yes	|	Ship to phone, for carrier
+shipTo.Email | no	| Ship to email, for carrier
+shipTo.AddressLine1 | yes |	Ship to address line 1
+shipTo.AddressLine2 | no | Ship to address line 2
+shipTo.City | yes | Ship to city
+shipTo.State | yes	|	Ship to state (2 char)
+shipTo.Zip | yes	|	Ship to zip/postal code
+shipTo.Country | yes	|	Ship to country must always be CA.
+shipTo.Note | yes |	Ship to note (for carrier/customer) max 100 caracters.
+details.product | yes	|	Transit part number
+details.qty | yes	| Order Qty
 
 ### Error codes
 
@@ -68,23 +73,23 @@ Error Code | Message
 ---------- | -------
 2000 | Order not created because the request contains error(s).
 2001 | purchaseOrder must be unique.
-2002 | shipToLanguageNo must be EN or FR.
+2002 | shipTo LanguageNo must be EN or FR.
 2003 | product XXX is invalid.
 2004 | product XXX qty XXX is not available.
 2005 | product XXX qty XXX must be greater than 0.
 2006 | purchaseOrder must be alphanumeric only.
 2007 | purchaseOrder must be less than 11 characters.
 2008 | product XXX Qty XXX must be a factor of XXX.
-2009 | shipToState must be 2 letters. Quebec = QC.
-2010 | shipToCountry must be CA.
+2009 | shipTo State must be 2 letters. Quebec = QC.
+2010 | shipTo Country must be CA.
 2101 | purchaseOrder is required.
-2102 | shipToLanguageNo is required.
-2103 | shipToName is required.
-2104 | shipToPhone is required.
-2105 | shipToAddressLine1 is required.
-2106 | shipToCity is required.
-2107 | shipToState is required.
-2108 | shipToZip is required.
+2102 | shipTo LanguageNo is required.
+2103 | shipTo Name is required.
+2104 | shipTo Phone is required.
+2105 | shipTo AddressLine1 is required.
+2106 | shipTo City is required.
+2107 | shipTo State is required.
+2108 | shipTo Zip is required.
 2109 | shipToCountry is required.
 2110 | A product is required.
 2112 | shipTo address is invalid.
