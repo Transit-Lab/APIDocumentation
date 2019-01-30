@@ -60,7 +60,7 @@ shipTo.AddressLine2 | no | Ship to address line 2
 shipTo.City | yes | Ship to city
 shipTo.State | yes	|	Ship to state (2 char)
 shipTo.Zip | yes	|	Ship to zip/postal code
-shipTo.Country | yes	|	Ship to country must always be CA.
+shipTo.Country | yes	|	Ship to country must be CA or US.
 shipTo.Note | yes |	Ship to note (for carrier/customer) max 100 caracters.
 details.product | yes	|	Transit part number
 details.qty | yes	| Order Qty
@@ -80,8 +80,8 @@ Error Code | Message
 2006 | purchaseOrder must be alphanumeric only.
 2007 | purchaseOrder must be less than 11 characters.
 2008 | product XXX Qty XXX must be a factor of XXX.
-2009 | shipTo State must be 2 letters. Quebec = QC.
-2010 | shipTo Country must be CA.
+2009 | shipTo State must be 2 letters.
+2010 | shipTo Country must be CA or US.
 2101 | purchaseOrder is required.
 2102 | shipTo LanguageNo is required.
 2103 | shipTo Name is required.
