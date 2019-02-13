@@ -10,6 +10,7 @@ toc_footers:
 includes:
   - products
   - orders
+  - inventory
   - errors
 
 search: true
