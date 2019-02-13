@@ -39,7 +39,7 @@ See the [Errors](#errors) section to know how to read error codes.
 
 Error Code | Message
 ---------- | -------
-6001 | Access not configured for this warehouse.
+6001 | Invalid warehouse, or access not allowed for this warehouse.
 6002 | Invalid type.
 6003 | Invalid format.
 6004 | Information not available at this time.
