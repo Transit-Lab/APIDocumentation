@@ -30,7 +30,7 @@ This endpoint retrieves the inventory for a specific Transit warehouse, all prod
 Parameter | Required | Description
 --------- | -------- | -----------
 warehouse | yes | Transit warehouse code. Example: 001 is Levis Warehouse.
-type | yes | FULL for a full list of products, refreshed each night. UPDATE for the list of products containing changes since last night.
+type | yes | FULL: for the full list of products refreshed each hour. UPDATE: for the list of all products that their inventory has changed today (since midnight).
 format | yes | JSON for json output. CSV for csv output.
 
 ### Error codes
