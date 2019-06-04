@@ -50,10 +50,11 @@ Parameter | Required | Description
 --------- | -------- | -----------
 purchaseOrder | yes | Unique alphanumeric order number, will be set as the PO on the Transit Invoice for this order. Max 10 characters.
 isPickup | yes | false if you want Transit to ship the order. true for a customer pickup at Transit Warehouse.
+shippingService | no | For shipped orders, the desired shipping service.
 shipTo | no | Don't specify the shipTo object for pickup orders or if you want to keep the default shipto configured in the linked Transit Customer Zone account.
 shipTo.LanguageNo | yes | Packing Slip Language. Must be EN, or FR.
 shipTo.Name | yes | Ship to name, on carrier label, packing slip
-shipTo.Phone | yes	|	Ship to phone, for carrier
+shipTo.Phone | yes |	Ship to phone, for carrier
 shipTo.Email | no	| Ship to email, for carrier
 shipTo.AddressLine1 | yes |	Ship to address line 1
 shipTo.AddressLine2 | no | Ship to address line 2
