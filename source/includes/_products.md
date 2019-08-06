@@ -58,4 +58,4 @@ See the [Errors](#errors) section to know how to read error codes.
 
 Error Code | Message
 ---------- | -------
-n/a | n/a
+4001 | At least one product number is required.
