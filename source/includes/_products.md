@@ -152,7 +152,7 @@ See the [Errors](#errors) section to know how to read error codes.
 
 Error Code | Message
 ---------- | -------
-2003 | Product {prod} is invalid.
-2003 | Product {prod} not found in Warehouse {whse}
+2003 | Product XXX is invalid.
+2003 | Product XXX not found in Warehouse XXX.
 4001 | At least one product number is required.
 6001 | Invalid warehouse, or access not allowed for this warehouse.

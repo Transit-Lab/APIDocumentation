@@ -151,13 +151,15 @@ curl "https://api.transitinc.com/v2/orders"
 }
 ```
 
-With status code `201` (Created) and a Location header containing the relative path to the newly created order.
-
 This endpoint submits a new order to Transit.
 
 ### HTTP Request
 
 `POST https://api.transitinc.com/v2/orders`
+
+### HTTP Response
+`Status code: 201`  
+`Location header: /v1/orders/purchase-order`
 
 ### Query Parameters
 
@@ -165,10 +167,10 @@ Parameter | Required | Description
 --------- | -------- | -----------
 whse | no |  Warehouse at which you wish to submit your order, will default to your default warehouse.
 whsePickup | no | For pickup orders, Warehouse at which you wish to pickup your order.
-purchaseOrder | yes | Unique alphanumeric order number, will be set as the PO on the Transit Invoice for this order. (22 chars max)
+purchaseOrder | yes | Unique alphanumeric order number, will be set as the PO on the Transit Invoice for this order.
 shippingService | no | For shipped orders, the desired shipping service.
-transitNote | no | Transit **will** take note of this. This note will not be printed on any document. The nature of this note may cause delays. (960 chars max)
-documentNote | no | Transit **will not** take note of this. This note will be printed on the documents related to this order. (960 chars max)
+transitNote | no | Transit **will** take note of this. This note will not be printed on any document. The nature of this note may cause delays.
+documentNote | no | Transit **will not** take note of this. This note will be printed on the documents related to this order.
 shipTo | no | Don't specify the shipTo object for pickup orders or if you want to keep the default shipto configured in the linked Transit Customer Zone account.
 shipTo.languageNo | yes | Packing Slip Language. Must be EN, or FR.
 shipTo.name | yes | Ship to name, on carrier label, packing slip
@@ -178,10 +180,10 @@ shipTo.addressLine1 | yes | Ship to address line 1
 shipTo.addressLine2 | no | Ship to address line 2
 shipTo.addressLine3 | no | Ship to address line 3
 shipTo.city | yes | Ship to city
-shipTo.state | yes | Ship to state (2 chars)
+shipTo.state | yes | Ship to state
 shipTo.zip | yes | Ship to zip/postal code
 shipTo.country | yes | Ship to country must be CA or US.
-shipTo.note | yes | Ship to note (for carrier/customer) max 30 chars.
+shipTo.note | yes | Ship to note (for carrier/customer).
 details | yes | List of products you wish to order.
 details.product | yes | Transit part number
 details.qty | yes | Order Qty in **stocking units** (With a P10 product, request 1 to get a pack of 10)
