@@ -168,12 +168,12 @@ Parameter | Required | Description
 whse | no |  Warehouse at which you wish to submit your order, will default to your default warehouse.
 whsePickup | no | For pickup orders, Warehouse at which you wish to pickup your order.
 purchaseOrder | yes | Unique alphanumeric order number, will be set as the PO on the Transit Invoice for this order.
-shippingService | no | For shipped orders, the desired shipping service.
+shippingService | no | For shipped orders, the desired shipping service. **If set, prevails over whsePickup, making the order a shipped order.**
 transitNote | no | Transit **will** take note of this. This note will not be printed on any document. The nature of this note may cause delays.
 documentNote | no | Transit **will not** take note of this. This note will be printed on the documents related to this order.
 shipTo | no | Don't specify the shipTo object for pickup orders or if you want to keep the default shipto configured in the linked Transit Customer Zone account.
-shipTo.languageNo | yes | Packing Slip Language. Must be EN, or FR.
-shipTo.name | yes | Ship to name, on carrier label, packing slip
+shipTo.languageNo | no | Language used for notifications. Defaults to token's language no.
+shipTo.name | yes | Ship to name, on carrier label
 shipTo.phone | yes | Ship to phone, for carrier
 shipTo.email | no	| Ship to email, for carrier
 shipTo.addressLine1 | yes | Ship to address line 1
@@ -213,7 +213,6 @@ Error Code | Message
 2023 | Oups! Qty XX exceeds our availability of XX for product XXX.
 2024 | Declared value must be greater than zero. (Product XXX)
 2101 | purchaseOrder is required.
-2102 | Ship To LanguageNo is required.
 2103 | Ship To Name is required.
 2104 | Ship To Phone is required.
 2105 | Ship To Address Line 1 is required.
