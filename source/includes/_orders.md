@@ -206,7 +206,7 @@ Error Code | Message
 2007 | Purchase Order must not exceed 22 characters..
 2010 | Ship To Country Code must be CA or US.
 2011 | Product XXX not found in Warehouse XXX.
-2018 | Back Order option only available for STOCK products. (Product XXX)
+2018 | Back Order is not allowed for XXX, this product will be discontinued.
 2019 | Invalid pickup warehouse.
 2020 | Shipping Service must not exceed 100 characters.
 2021 | Invalid Shipping Service.
