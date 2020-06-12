@@ -182,14 +182,14 @@ shipTo.addressLine3 | no | Ship to address line 3
 shipTo.city | yes | Ship to city
 shipTo.state | yes | Ship to state
 shipTo.zip | yes | Ship to zip/postal code
-shipTo.country | yes | Ship to country must be CA or US.
+shipTo.country | yes | Ship to country.
 shipTo.note | yes | Ship to note (for carrier/customer).
 details | yes | List of products you wish to order.
 details.product | yes | Transit part number
-details.qty | yes | Order Qty in **stocking units** (With a P10 product, request 1 to get a pack of 10)
-details.crossReference | no | Reference number for the product.
+details.qty | yes | Order Qty *(unit is used, no altUnit are supported)*
+details.crossReference | no | *Your* reference number for the product.
 details.keepBo | no | Keep back order if there is not enough stock to fullfill your order.
-details.declaredValue | no | Declared valued of the product. For international dropship orders.
+details.declaredValue | no | Declared valued of the product. *Required* for international orders.
 
 ### Error codes
 
