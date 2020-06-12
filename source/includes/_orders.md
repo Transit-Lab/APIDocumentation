@@ -186,10 +186,10 @@ shipTo.country | yes | Ship to country.
 shipTo.note | yes | Ship to note (for carrier/customer).
 details | yes | List of products you wish to order.
 details.product | yes | Transit part number
-details.qty | yes | Order Qty *(unit is used, no altUnit are supported)*
-details.crossReference | no | *Your* reference number for the product.
+details.qty | yes | Order Qty (unit is used, no altUnit are supported)
+details.crossReference | no | Your reference number for the product.
 details.keepBo | no | Keep back order if there is not enough stock to fullfill your order.
-details.declaredValue | no | Declared valued of the product. *Required* for international orders.
+details.declaredValue | no | Declared valued of the product. Required for international orders.
 
 ### Error codes
 
