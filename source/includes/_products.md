@@ -2,6 +2,8 @@
 
 ## Get Products
 
+**Please use v2 for any new implementation**
+
 ```shell
 curl "https://api.transitinc.com/v1/products?products=8-56140,LOP-LP5"
   -H "Authorization: Basic YourAuthTokenBase64"
