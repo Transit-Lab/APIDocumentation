@@ -27,3 +27,8 @@ For every API endpoint, if an invalid or empty auth token is supplied, the respo
 For any other error, the response HTTP code is `500` instead of `200`.
 
 Additionnaly, a JSON object is returned with a detailed error code and message. If more than one error is encountered in the same request, an additionnal `errors` JSON array is returned.
+
+### New in V2 routes
+The error response always returns an "errors" array. It is empty if there is a single error.
+
+An error response will have HTTP code `400` (Bad Request).
