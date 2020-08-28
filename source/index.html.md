@@ -24,6 +24,8 @@ You can use our API to access product information, submit new orders and view yo
 
 You can view code examples in the dark area to the right. Any language able to make HTTP calls will work. The examples use shell scripting curl commands.
 
+**Please use the newest available APIs for all new implementations**
+
 # Authentication
 
 Transit uses API authentication tokens to allow access to the API. You can register a new Transit API auth token by communicating with your sales representative.

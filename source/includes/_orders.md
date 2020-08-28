@@ -2,6 +2,8 @@
 
 ## Submit Order
 
+**Please use v2 for any new implementation**
+
 ```shell
 curl "https://api.transitinc.com/v1/orders"
   -X POST
