@@ -168,7 +168,7 @@ This endpoint submits a new order to Transit.
 Parameter | Required | Description
 --------- | -------- | -----------
 whse | no |  Warehouse at which you wish to submit your order, will default to your default warehouse.
-whsePickup | no | For pickup orders, Warehouse at which you wish to pickup your order.
+whsePickup | no | For pickup orders, Warehouse at which you wish to pickup your order. If not set, the order will be shipped using *shippingService* or the default shipping method registered to your account.
 purchaseOrder | yes | Unique alphanumeric order number, will be set as the PO on the Transit Invoice for this order.
 shippingService | no | For shipped orders, the desired shipping service. **If set, prevails over whsePickup, making the order a shipped order.**
 transitNote | no | Transit **will** take note of this. This note will not be printed on any document. The nature of this note may cause delays.
