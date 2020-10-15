@@ -2,7 +2,9 @@
 
 ## Get Products
 
-**Please use v2 for any new implementation**
+<aside class="warning">
+Please use v2 for any new implementation
+</aside>
 
 ```shell
 curl "https://api.transitinc.com/v1/products?products=8-56140,LOP-LP5"
