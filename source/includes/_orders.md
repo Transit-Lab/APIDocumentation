@@ -2,7 +2,9 @@
 
 ## Submit Order
 
-**Please use v2 for any new implementation**
+<aside class="warning">
+Please use v2 for any new implementation
+</aside>
 
 ```shell
 curl "https://api.transitinc.com/v1/orders"
