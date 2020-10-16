@@ -245,6 +245,10 @@ Product XXX, XX units ordered, XX units kept BO.
 
 ## Get Order
 
+<aside class="notice">
+Get Order v2 not released yet
+</aside>
+
 ```shell
 curl "https://api.transitinc.com/v1/orders/123456"
   -H "Authorization: Basic YourAuthTokenBase64"

@@ -2,6 +2,10 @@
 
 ## Get Inventory
 
+<aside class="notice">
+Get Inventory v2 not released yet
+</aside>
+
 ```shell
 curl "https://api.transitinc.com/v1/inventory?warehouse=001&type=FULL&format=JSON"
   -H "Authorization: Basic YourAuthTokenBase64"
