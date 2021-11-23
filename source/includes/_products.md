@@ -141,6 +141,7 @@ Parameter | Required | Description
 --------- | -------- | -----------
 products | yes | Comma separated list of Transit part numbers
 whse | no | Transit warehouse to get results from
+ignoreProductError | no | true / false - When true products will be returned even if an error is encountered.
 
 <aside class="notice">
   Remember — The request must be authenticated.
