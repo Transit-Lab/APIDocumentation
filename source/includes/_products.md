@@ -67,7 +67,7 @@ Error Code | Message
 ## Get Products V2
 
 ```shell
-curl "https://api.transitinc.com/v2/products?whse=001&products=8-56140,LOP-LP5"
+curl "https://api.transitinc.com/v2/products?whse=001&products=8-56140,LOP-LP5,PPC-D741&ignoreProductError=true"
   -H "Authorization: Basic YourAuthTokenBase64"
 ```
 
@@ -125,7 +125,12 @@ curl "https://api.transitinc.com/v2/products?whse=001&products=8-56140,LOP-LP5"
             ],
             "available": 494
         }
-    ]
+    ],
+    "errors": {
+        "code": 2011,
+        "message": "Product PPC-D741 not found in Warehouse 001.",
+        "errors": []
+    }
 }
 ```
 
@@ -141,7 +146,7 @@ Parameter | Required | Description
 --------- | -------- | -----------
 products | yes | Comma separated list of Transit part numbers
 whse | no | Transit warehouse to get results from
-ignoreProductError | no | true / false - When true products will be returned even if an error is encountered.
+ignoreProductError | no | true / false - When true products will be returned even if an error is encountered. Defaults to false.
 
 <aside class="notice">
   Remember — The request must be authenticated.
